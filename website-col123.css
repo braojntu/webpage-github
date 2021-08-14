@@ -1,0 +1,80 @@
+.page {
+    display: grid;
+    width: 90%;
+    height: 550px;
+    justify-items: normal center;
+    grid-template-areas: "head head"
+                         "nav  main"
+                         "nav  foot";
+    grid-template-rows: 70px 1fr 200px; /*header main footer*/
+    grid-template-columns: 350px 1fr;  /*first-column second-column*/
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+  }
+
+  .page > header {
+    grid-area: head;
+    background-color: #00363E;
+    display: flex;
+    direction: row;
+  }
+ 
+  .page > header >.logo {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    padding-left: 25px;
+  }
+ 
+  .page > header >.name {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    justify-content: center; /* Horizontal alignment */
+    padding-left: 475px;
+    
+  }
+   
+  .page > nav {
+    grid-area: nav;
+    background-color: #00363E;
+    margin: 50px 50px 50px 50px;
+    border-radius: 10px;
+  }
+
+  
+  .page > main >.search {
+    padding: 10px;
+    margin: 50px 75px 25px 75px;
+    background-color: grey;
+    color: white;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    display: flex; /*vertical alignment only works with flex*/
+    width: 70%;
+  }
+
+  .page > main > .box {
+    display: grid;
+    grid-template-areas: "1fr 1fr 1fr";
+    height: 125px;
+  gap: 50px;
+  margin: 0px 50px 0px 0px;
+ 
+}
+
+.page > main > .box >.b1,.b2,.b3 {
+    position: relative;
+    background-color: burlywood;
+    border-radius: 10px;
+}
+
+  .page > footer {
+    grid-area: foot;
+    background-color: teal;
+    margin: 10px 50px 50px 0px;
+    border-radius: 10px;
+  }
